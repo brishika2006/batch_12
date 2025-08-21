@@ -1,0 +1,150 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNIYy8NIM/RxYc6PjKfFWTn",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/brishika2006/batch_12/blob/main/dataframes(21-08-2025)\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zkEqr1L3dviJ",
+        "outputId": "f6c04118-906e-4da7-9efc-908aa8969523"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, True]\n"
+          ]
+        }
+      ],
+      "source": [
+        "my_list=[1,2,True]\n",
+        "print(my_list)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_dict={\"name\":\"rishika\",\"age\":19,\"city\":\"hnk\"}\n",
+        "print(my_dict)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_vCx2YgNerCU",
+        "outputId": "330d3e22-7d10-4374-b7df-dbdb48d042c0"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'rishika', 'age': 19, 'city': 'hnk'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "data={\"name\":[\"rishika\",\"shivkrishna\",\"Ganesh\"],\"age\":[19,50,25],\"city\":[\"hnk\",\"delhi\",\"mumbai\"]}\n",
+        "df=pd.DataFrame(data)\n",
+        "print(df)\n",
+        "df.to_csv(\"input.csv\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "a9xa7a0CfFID",
+        "outputId": "fd6a9c8b-5aa4-46d5-c395-efcd37066ca2"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "          name  age    city\n",
+            "0      rishika   19     hnk\n",
+            "1  shivkrishna   50   delhi\n",
+            "2       Ganesh   25  mumbai\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "data={\"name\":[\"rishi\",\"Bhavani\",\"AnjanaSri\",\"Ashwija\"],\"age\":[19,20,19,22],\"city\":[\"Mathura\",\"delhi\",\"gudoor\",\"Dwaraka\"]}\n",
+        "df1=pd.DataFrame(data)\n",
+        "print(df)\n",
+        "df1.to_csv(\"input.csv\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jR0jCCRIgyYd",
+        "outputId": "85415d4c-1b39-4a45-e81b-187f8b4bb47f"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "        name  age     city\n",
+            "0      rishi   19  Mathura\n",
+            "1    Bhavani   20    delhi\n",
+            "2  AnjanaSri   19   gudoor\n",
+            "3    Ashwija   22  Dwaraka\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "merge_df=pd.contact([df, df1])"
+      ],
+      "metadata": {
+        "id": "TetxBO-emg1r"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
